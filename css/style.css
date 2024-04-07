@@ -59,7 +59,6 @@ body {
 .filter-container {
   display: flex;
   flex-direction: column;
-  /* gap: 35px; */
   margin-bottom: 35px;
 }
 
@@ -121,6 +120,7 @@ form {
   background-color: #0065fc;
   color: white;
   font-weight: bold;
+  font-size: 18px;
 }
 
 .btn-search .fa-magnifying-glass {
@@ -128,10 +128,8 @@ form {
 }
 
 /* filtres de recherche*/
-
 .subtitle-filter {
   font-size: 18px;
-  /* margin-top: 0; */
 }
 
 .filters {
@@ -263,6 +261,7 @@ a {
 .hebergements {
   box-sizing: border-box;
   width: 65%;
+  gap: 15px;
 }
 
 .hebergements-cards {
@@ -377,59 +376,51 @@ a {
 }
 
 /* Activités*/
-
 .activites {
-  padding: 30px;
+  margin: 50px auto 40px;
 }
 
-.activites-cardlink {
-  display: flex;
-  flex-grow: 1;
-  flex-shrink: 1;
-  flex-basis: 300px;
-  margin-bottom: 30px;
+.activites .section-title {
+  padding-left: 30px;
 }
 
 .activites-cards {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  padding: 30px;
-  padding-top: 0px;
-  gap: 20px;
-}
-
-.activites-card {
   display: flex;
-  flex-direction: column;
-  flex: 1 1 auto;
-  margin-right: 10px;
-  border-radius: 20px;
-  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.1);
+  flex-direction: row;
+  gap: 30px;
+  margin-bottom: 40px;
+  padding: 30px;
 }
 
 .activites-card img {
-  height: 90%;
   width: 100%;
+  height: 85%;
   object-fit: cover;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
 }
 
-.subtitle-card-activite {
-  font-size: 16px;
-  font-weight: bold;
-  display: flex;
-  align-items: center;
-  padding: 15px;
-  box-sizing: border-box;
+.activites-card {
+  height: 100%;
+  border-radius: 20px;
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.1);
 }
 
-.card-content {
-  box-sizing: border-box;
+.activites-cardlink {
+  flex: 1 1 0;
+  height: 440px;
+}
+
+.subtitle-card-activite {
+  height: 15%;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
+  font-size: 16px;
 }
 
 /* footer*/
-
 footer {
   background-color: #f2f2f2;
 }
@@ -529,18 +520,20 @@ footer {
     font-size: 13px;
   }
 
+  .activites-cardlink {
+    height: 270px;
+  }
+
   .activites-card img {
     height: 75%;
   }
-
   .subtitle-card-activite {
     height: 25%;
-    padding: 0 0 0 15px;
   }
 }
 
 /* Small devices (phones, less than 768px) */
-@media (max-width: 767.98px) {
+@media (max-width: 768px) {
   body {
     margin: 0;
   }
@@ -593,12 +586,14 @@ footer {
 
   .navlink:hover {
     border-top: none;
+    color: inherit;
   }
 
   .navlink:active {
     width: 50%;
     border-top: none;
     border-bottom: 2px #0065fc solid;
+    color: #0065fc;
   }
 
   .filter-container {
@@ -608,7 +603,7 @@ footer {
   form {
     min-width: 280px;
     width: auto;
-    display: flex;
+    /* display: flex; */
     margin-bottom: 20px;
   }
 
@@ -689,7 +684,6 @@ footer {
   }
 
   /* Hébergements and populaires */
-
   .hebergements-and-populaires {
     display: flex;
     flex-direction: column-reverse;
@@ -706,10 +700,12 @@ footer {
   .hebergements-cards {
     display: flex;
     flex-direction: column;
+    gap: 0;
   }
 
   .hebergement-cardlink {
     width: 100%;
+    margin-bottom: 15px;
   }
 
   .populaires {
@@ -742,43 +738,39 @@ footer {
   }
 
   /* Hébergements */
-
   .hebergements {
     background-color: white;
   }
 
+  .hebergements-cards {
+    margin-top: 20px;
+  }
+
   /* Activités */
+  .activites .section-title {
+    margin-left: 5cqmin;
+  }
 
   .activites-cards {
-    display: grid;
-    grid-template-columns: none;
-    grid-template-rows: 1fr;
-    padding: 30px;
-    padding-top: 0px;
-    margin-bottom: 35px;
+    width: 80%;
+    flex-direction: column;
     gap: 15px;
+    margin: 0 auto 40px;
   }
 
   .activites-cardlink {
-    width: 100%;
-    margin-bottom: 0px;
-  }
-
-  .activites-card {
-    margin-right: 0px;
+    height: 200px;
   }
 
   .activites-card img {
-    height: 75%;
-    width: 100%;
-    max-height: 141px;
-    object-fit: cover;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
+    height: 70%;
+  }
+
+  .subtitle-card-activite {
+    height: 30%;
   }
 
   /* footer */
-
   .section-footer {
     display: grid;
     grid-template-columns: none;
